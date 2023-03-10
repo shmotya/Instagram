@@ -3,10 +3,16 @@
     <style name="Theme.Instagram" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
 
-        <!-- Secondary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
+
+    <style name="pictures">
+        <!-- Primary brand color. -->
+        <attr pictures="margin: 0; padding: 0"/>
+
+    </style>
+
 </resources>

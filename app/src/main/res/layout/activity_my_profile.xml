@@ -34,17 +34,16 @@
                     android:id="@+id/username"
                     android:textColor="@color/colorPrimaryDark"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/options"
-                        android:src="@drawable/ic_options"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="15dp"
-                        android:contentDescription="options">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/options"
+                    android:src="@drawable/ic_options"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:contentDescription="@string/imOptions">
 
-                    </ImageView>
-
+                </ImageView>
 
             </RelativeLayout>
 
@@ -55,7 +54,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/bar">
+        android:layout_below="@+id/bar"
+        android:layout_marginTop="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,20 +63,21 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/top"
-                android:padding="15dp"/>
+                android:padding="10dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageProfile"
-                android:layout_width="80dp"
-                android:layout_height="80dp" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/ic_avatar" />
 
-            <LinearLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingStart="20dp"
                     android:paddingEnd="5dp">
@@ -93,102 +94,210 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:id="@+id/tvPosts"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="18sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:text="@string/numberOfPosts"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/posts"/>
+                                android:text="@string/posts" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="35dp">
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:id="@+id/tvFollowers"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="18sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:text="@string/numberOfFollowers"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/followers"/>
+                                android:text="@string/followers" />
+
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="35dp">
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:id="@+id/tvFollowings"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="18sp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                android:text="@string/numberOfFollowings"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/followings"/>
+                                android:text="@string/followings" />
 
                         </LinearLayout>
 
                     </LinearLayout>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/editProfile"
-                    android:id="@+id/editProfile"/>
+                    <Button
+                        android:id="@+id/editProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="@string/editProfile" />
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
-        </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/mid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:id="@+id/mid"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingStart="15dp">
 
                 <TextView
+                    android:id="@+id/tvFullName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:id="@+id/tvFullName"
-                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:text="@string/fullName"/>
 
                 <TextView
+                    android:id="@+id/tvRole"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/role"/>
+
+                <TextView
                     android:id="@+id/tvBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
                     android:maxLines="5"
-                    android:textColor="@color/colorAccent"/>
+                    android:text="@string/bio"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ivMyPictures"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_my_pictures" />
+                <!--style="@android:attr/bottomBarButtonStyle"/>-->
+
+                <ImageButton
+                    android:id="@+id/ivTagged"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_tagged" />
+                <!--style="@android:attr/bottomBarButtonStyle"/>-->
+
+            </LinearLayout>
+
+<!--                        <androidx.recyclerview.widget.RecyclerView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/rvPictures" />-->
+
+<!--                        <androidx.recyclerview.widget.RecyclerView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:id="@+id/rvTagged"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/ic_postMarni"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/ic_postMemphis"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/ic_postRamen"
+                        android:layout_weight="1"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/ic_postMe" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
+
+
+
+        </LinearLayout>
 
     </ScrollView>
 

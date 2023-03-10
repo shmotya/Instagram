@@ -5,4 +5,13 @@
     <string name="followings">FOLLOWINGS</string>
     <string name="editProfile">Edit Profile</string>
     <string name="userName">sshmotya</string>
+    <string name="imOptions">options</string>
+    <string name="bio">UA | 🇺🇦
+👨‍💻 Music Producer
+📀Credits: @marnionstylist @deionbexby</string>
+    <string name="role">Producer</string>
+    <string name="fullName">Dan Shvydko</string>
+    <string name="numberOfPosts">4</string>
+    <string name="numberOfFollowers">170</string>
+    <string name="numberOfFollowings">98</string>
 </resources>
