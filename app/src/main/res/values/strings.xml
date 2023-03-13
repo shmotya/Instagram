@@ -15,5 +15,8 @@
     <string name="numberOfFollowers">170</string>
     <string name="numberOfFollowings">98</string>
     <string name="save">SAVE</string>
-    <string name="enter_new_name_hint">Enter name</string>
+    <string name="enter_new_name_hint">Enter name here</string>
+    <string name="current_name_message">Your current name:</string>
+    <string name="your_current_username">Your current username:</string>
+    <string name="change_your_name_header">Change your name</string>
 </resources>

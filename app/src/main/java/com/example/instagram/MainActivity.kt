@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding.btEditProfile.setOnClickListener {
             val intent = Intent(this, ChangeNameActivity::class.java)
             intent.putExtra("username", binding.tvUsername.text.toString())
+            intent.putExtra("fullname", binding.tvFullName.text.toString())
             startActivityForResult(intent, 1)
         }
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
             binding.tvUsername.text = data?.getStringExtra("username")
+            binding.tvFullName.text = data?.getStringExtra("fullname")
 
     }
 

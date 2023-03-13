@@ -17,11 +17,14 @@ class ChangeNameActivity : AppCompatActivity() {
         setContentView(view)
 
         val username = intent.getStringExtra("username")
-        binding.tv.setText(username)
+        val fullname = intent.getStringExtra("fullname")
+        binding.tvCurrentUsername.setText(username)
+        binding.tvCurrentName.setText(fullname)
 
         binding.btSave.setOnClickListener {
             var resultIntent = Intent(this, MyProfile::class.java)
-            resultIntent.putExtra("username", binding.etNameChange.text.toString())
+            resultIntent.putExtra("username", binding.etUsernameChange.text.toString())
+            resultIntent.putExtra("fullname", binding.etNameChange.text.toString())
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
