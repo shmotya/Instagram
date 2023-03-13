@@ -1,14 +1,17 @@
 package com.example.instagram
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.instagram.databinding.ActivityMyProfileBinding
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMyProfileBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMyProfileBinding.inflate(layoutInflater)
@@ -21,6 +24,18 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("fullname", binding.tvFullName.text.toString())
             startActivityForResult(intent, 1)
         }
+
+        binding.btLogIn.setOnClickListener {
+
+            if(binding.etLogIn.text.toString() == "sshmotya" && binding.etPassword.text.toString() == "12345") {
+                binding.llLogInWindow.isVisible = false
+            }
+
+            else
+                binding.tvWrongPassword.text = "Wrong login or password!"
+
+        }
+
 
     }
 

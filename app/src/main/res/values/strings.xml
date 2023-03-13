@@ -19,4 +19,8 @@
     <string name="current_name_message">Your current name:</string>
     <string name="your_current_username">Your current username:</string>
     <string name="change_your_name_header">Change your name</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="bt_log_in">Log In</string>
+    <string name="log_in">Log In</string>
 </resources>

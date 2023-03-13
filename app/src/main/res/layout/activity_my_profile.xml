@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".MyProfile">
 
+
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
@@ -53,6 +56,9 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -241,16 +247,6 @@
 
             </LinearLayout>
 
-<!--                        <androidx.recyclerview.widget.RecyclerView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:id="@+id/rvPictures" />-->
-
-<!--                        <androidx.recyclerview.widget.RecyclerView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:visibility="gone"-->
-<!--                            android:id="@+id/rvTagged"/>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -305,6 +301,9 @@
 
     </ScrollView>
 
+
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -320,9 +319,73 @@
             app:itemIconSize="30dp"
             android:background="?android:attr/windowBackground"
             app:menu="@menu/bottom_menu"/>
-
-
     </com.google.android.material.appbar.AppBarLayout>
 
+    <LinearLayout
+        android:id="@+id/llLogInWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9F000000"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/colorBlack"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_dark_background"
+                android:padding="2dp"
+                android:text="@string/log_in"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:hint="@string/login"
+                android:textColorHint="@color/colorWhite" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/colorWhite"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvWrongPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/red" />
+
+            <Button
+                android:id="@+id/btLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="@string/bt_log_in" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </RelativeLayout>
