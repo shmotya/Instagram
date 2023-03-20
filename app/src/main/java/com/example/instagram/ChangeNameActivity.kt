@@ -1,6 +1,5 @@
 package com.example.instagram
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +24,7 @@ class ChangeNameActivity : AppCompatActivity() {
             var resultIntent = Intent(this, MyProfile::class.java)
             resultIntent.putExtra("username", binding.etUsernameChange.text.toString())
             resultIntent.putExtra("fullname", binding.etNameChange.text.toString())
-            setResult(Activity.RESULT_OK, resultIntent)
+            setResult(3, resultIntent)
             finish()
         }
 
